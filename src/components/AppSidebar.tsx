@@ -7,6 +7,7 @@ import {
   Package,
   DollarSign,
   Receipt,
+  ShoppingCart,
 } from "lucide-react";
 import {
   Sidebar,
@@ -25,6 +26,7 @@ const menuItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
   { title: "Trabajadores", url: "/trabajadores", icon: Users },
   { title: "Servicios", url: "/servicios", icon: Sparkles },
+  { title: "Ventas", url: "/ventas", icon: ShoppingCart },
   { title: "Reportes", url: "/reportes", icon: FileText },
   { title: "Inventario", url: "/inventario", icon: Package },
   { title: "Comisiones", url: "/comisiones", icon: DollarSign },
