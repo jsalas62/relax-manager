@@ -23,14 +23,14 @@ import {
 } from "@/components/ui/sidebar";
 
 const menuItems = [
-  { title: "Dashboard", url: "/", icon: LayoutDashboard },
-  { title: "Trabajadores", url: "/trabajadores", icon: Users },
-  { title: "Servicios", url: "/servicios", icon: Sparkles },
-  { title: "Ventas", url: "/ventas", icon: ShoppingCart },
-  { title: "Reportes", url: "/reportes", icon: FileText },
-  { title: "Inventario", url: "/inventario", icon: Package },
-  { title: "Comisiones", url: "/comisiones", icon: DollarSign },
-  { title: "Planilla", url: "/planilla", icon: Receipt },
+  { title: "Dashboard", url: "/", icon: LayoutDashboard, color: "hsl(var(--page-dashboard))" },
+  { title: "Trabajadores", url: "/trabajadores", icon: Users, color: "hsl(var(--page-trabajadores))" },
+  { title: "Servicios", url: "/servicios", icon: Sparkles, color: "hsl(var(--page-servicios))" },
+  { title: "Ventas", url: "/ventas", icon: ShoppingCart, color: "hsl(var(--page-ventas))" },
+  { title: "Reportes", url: "/reportes", icon: FileText, color: "hsl(var(--page-reportes))" },
+  { title: "Inventario", url: "/inventario", icon: Package, color: "hsl(var(--page-inventario))" },
+  { title: "Comisiones", url: "/comisiones", icon: DollarSign, color: "hsl(var(--page-comisiones))" },
+  { title: "Planilla", url: "/planilla", icon: Receipt, color: "hsl(var(--page-planilla))" },
 ];
 
 export function AppSidebar() {
@@ -69,8 +69,17 @@ export function AppSidebar() {
                       end={item.url === "/"}
                       className={({ isActive }) =>
                         isActive
-                          ? "bg-sidebar-accent text-sidebar-primary font-medium"
+                          ? "font-medium"
                           : "hover:bg-sidebar-accent/50"
+                      }
+                      style={({ isActive }) =>
+                        isActive
+                          ? {
+                              backgroundColor: `${item.color}15`,
+                              color: item.color,
+                              borderLeft: `3px solid ${item.color}`,
+                            }
+                          : {}
                       }
                     >
                       <item.icon className="h-5 w-5" />

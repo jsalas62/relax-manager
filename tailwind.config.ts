@@ -57,6 +57,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        page: {
+          dashboard: "hsl(var(--page-dashboard))",
+          trabajadores: "hsl(var(--page-trabajadores))",
+          servicios: "hsl(var(--page-servicios))",
+          ventas: "hsl(var(--page-ventas))",
+          reportes: "hsl(var(--page-reportes))",
+          inventario: "hsl(var(--page-inventario))",
+          comisiones: "hsl(var(--page-comisiones))",
+          planilla: "hsl(var(--page-planilla))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
